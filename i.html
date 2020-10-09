@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="" id='phone' onkeydown="validate()">
+    <small id='small'></small>
+    <script>
+        var rule = /^\d\d\d-\d\d\d\d-\d\d\d$/
+
+        function validate(){
+            var phone = document.getElementById('phone').value;
+            var small = document.getElementById('small');
+           
+           if(phone.match(rule)){
+               small.innerHTML = "hop lệ rồi nha"
+           }else{
+               small.innerHTML = "khong hop le"
+           }
+
+           if(phone == ""){
+               small.innerHTML = ""
+           }
+
+            console.log(phone)
+        }
+       
+    </script>
+</body>
+
+</html>
